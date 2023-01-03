@@ -1,0 +1,12 @@
+#carousel-container {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-item {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+  }
