@@ -15,11 +15,25 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit() {
 
-    const prevbutton = document.getElementById('prev-button') as HTMLButtonElement;
-    const nextbutton = document.getElementById('next-button') as HTMLButtonElement;
+    const prevButton = document.getElementById('prev-button') as HTMLButtonElement;
+    const nextButton = document.getElementById('next-button') as HTMLButtonElement;
 
+    console.log(prevButton);
+    console.log(nextButton);
 
-    if (this.prevButton) {
+    function scroll(direction : number)
+    {
+      this.currentPosition += direction*500;
+    
+      if(this.carouselContainer)
+      {
+        this.carouselContainer.nativeElement.styme.transform="translateX("+this.currentPosition+"px)";
+      }
+    }
+
+    /*
+    if ('id' in prevButton) {
+      console.log("a");
       this.prevButton.nativeElement.addEventListener('click', () => {
         this.currentPosition -= 500;
         if(this.carouselContainer)
@@ -28,8 +42,12 @@ export class CarouselComponent implements OnInit {
         }
       });
     }
+    else
+    {
+      console.log("b");
+    }
 
-    if(this.nextButton)
+    if(typeof nextButton !== 'undefined')
     {
       this.nextButton.nativeElement.addEventListener('click', () => {
         this.currentPosition += 500;
@@ -39,6 +57,6 @@ export class CarouselComponent implements OnInit {
         }
       });
     }
-
+    */
   }
 }

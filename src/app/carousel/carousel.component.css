@@ -1,12 +1,23 @@
-#carousel-container {
-    width: 500px;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .carousel-item {
-    width: 500px;
-    height: 300px;
-    position: absolute;
-  }
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item {
+  width: 33.333%;
+  height: 100%;
+  position: absolute;
+}
+
+.carousel-item:nth-child(1) {
+  left: 0%;
+}
+
+.carousel-item:nth-child(2) {
+  left: 33.333%;
+}
+
+.carousel-item:nth-child(3) {
+  left: 66.666%;
+}
