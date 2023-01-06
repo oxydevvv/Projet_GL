@@ -14,13 +14,13 @@ export class CarouselComponent implements OnInit {
   currentPosition = 0;
 
   ngOnInit() {
-
+    /*
     const prevButton = document.getElementById('prev-button') as HTMLButtonElement;
     const nextButton = document.getElementById('next-button') as HTMLButtonElement;
 
     console.log(prevButton);
     console.log(nextButton);
-
+    /*
     function scroll(direction : number)
     {
       this.currentPosition += direction*500;
