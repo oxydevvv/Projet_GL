@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="search-container">
+        <input type="text" [(ngModel)]="query" class="search-input">
+        <button (click)="search()" class="search-button">Search</button>
+        <button (click)="clear()" class="clear-button">Clear</button>
+      </div>  
+        <div id="carousel-container">
+            <div class="carousel-item" *ngFor="let pizza of pizzas">
+                <app-card (click)="ajouterPanier(pizza.nom,pizza.price)" [item]="{
+                    name: '{{pizza.nom}}',
+                    description: 'Pizza chorizo, with chorizo of course',
+                    imageUrl: 'https://img.zoo.media/cache/mod_bt_contentslider/acc437797968b7475dce84d0bf838ae8-220c08548cac211cc7db219bb52f46cf_XL.jpg',
+                    price: 9.99
+                  }" nom={{pizza.nom}} description={{pizza.short_description}} prix="{{pizza.price}}" url="{{pizza.picture}}"></app-card>
+            </div>
+        </div>
+      
+</div>
+<div class="panier">
+  <div id="caisse_container"> 
+    <div id="caisse">
+      <div id="details">
+        <table class="details_table">
+          <thead>
+            <tr>
+              <th class="qtt">quantité</th>
+              <th class="art">articles</th>
+              <th class="price">prix (€)</th>
+              <th class="image"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let elementsPanier of elementsPaniers" class="ligne">
+              <td class="qtt">{{elementsPanier.quantite}}</td>
+              <td class="art">{{elementsPanier.nom}}</td>
+              <td class="price">{{elementsPanier.prixtotalligne}}</td>
+              <td class="image"><button (click)="supprimer(elementsPanier.nom)" class="sup-button">supprimer</button></td>
+            </tr>
+            <tr class="ligne">
+              <td class="qtt"></td>
+              <td class="art"></td>
+              <td  class="price"></td>
+              <td class="image"></td>
+            </tr>							
+            <tr class="ligne">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>								
+            <tr class="ligne">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>								
+            <tr class="ligne">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>			
+            <tr class="ligne">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>			
+            <tr class="ligne">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>			
+            <tr class="ligne">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>							
+          </tbody>
+        </table>
+        <table class="recap_table">
+          <tbody>
+            <tr>
+              <td>&Agrave; payer (€)</td>
+              <td id="montant_paye">{{prixTotal}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mesBu">
+          <button class="bu" (click)="viderPanier()">Vider le panier</button>
+          <button class="bu" (click)="passerCommande()">Passer commande</button>
+        </div>
+
+      </div>
+</div>

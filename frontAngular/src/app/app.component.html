@@ -1,26 +1,3 @@
-<h2>Liste des clients</h2>
-<ul>
-  <li *ngFor="let client of clients">
-    <h2>{{client.prenom}}</h2>
-  </li>
-</ul>
-
-<form (submit)="login()">
-  <label>
-    Nom d'utilisateur:
-    <input type="text" [(ngModel)]="email" name="email">
-  </label>
-  <br>
-  <label>
-    Mot de passe:
-    <input type="password" [(ngModel)]="motDePasse" name="motDePasse">
-  </label>
-  <br>
-  <button type="submit">Se connecter</button>
-</form>
-
-<h2>Liste des pizzas</h2>
-<ul>
-  <li *ngFor="let pizza of pizzas">
-    <h2>{{pizza.nom}}</h2>
-  </li>
+<app-carousel></app-carousel>
+<app-navbar></app-navbar>
+  

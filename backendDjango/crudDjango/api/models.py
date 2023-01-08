@@ -29,7 +29,7 @@ class Pizza(models.Model):
     taille = models.ManyToManyField(Taille,verbose_name='Taille')
     type = models.ForeignKey(Type, verbose_name='Type', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    picture = models.ImageField(blank=False,null=False)
+    picture = models.CharField(max_length=3000,blank=False)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

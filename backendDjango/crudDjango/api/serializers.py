@@ -11,6 +11,9 @@ class LoginSerializer(serializers.Serializer):
   email = serializers.CharField(max_length=100)
   motDePasse = serializers.CharField(max_length=100)
 
+class PizzSerializer(serializers.Serializer):
+  nom = serializers.CharField(max_length=100)
+
 class PizzaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Pizza

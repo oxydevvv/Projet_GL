@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: djangorestframework-word-filter
+Version: 0.2.0
+Summary: By word filter backend for Django REST Framework. No db backend special features (work on all db).
+Home-page: https://github.com/trollknurr/django-rest-framework-word-search-filter
+Author: Anton Shtarev
+Author-email: trollknurr@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: djangorestframework
+
+UNKNOWN
+
+

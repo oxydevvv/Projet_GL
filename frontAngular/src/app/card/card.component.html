@@ -1,0 +1,13 @@
+<div id="body1">
+    <div class="card">
+        <img src="{{ url }}" alt="{{ nom }}">
+        <h3>{{ nom }}</h3>
+        <p>{{ description }}</p>
+        <div class="price-container">
+            <span class="original-price">{{ prix }}</span>
+            <span class="discount" *ngIf="item.discount">{{ item.discount }}% off</span>
+        </div>
+    </div>
+</div>
+
+  
